@@ -1,0 +1,86 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Тестовое задание  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_point__2}{Point\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Структура, хранящая координату точки на двухмерной плостости \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_line__2}{Line\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Структура, хранящая координаты двух точек одной линии \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_hatch_generator}{Hatch\+Generator}}
+\begin{DoxyCompactList}\small\item\em Класс, генерирующий штриховку по заданным координатам четырехуголника \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} \mbox{\hyperlink{main_8cpp_a04efb37fe057a49d431ecab19a7f01f9}{find\+Top\+Left\+Corner}} (const std\+::vector$<$ \mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} $>$ \&in\+Contours\+Points)
+\item 
+\mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} \mbox{\hyperlink{main_8cpp_a1b29071e40cdef76db87e361837dfb3e}{find\+Bottom\+Right\+Corner}} (const std\+::vector$<$ \mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} $>$ \&in\+Contours\+Points)
+\item 
+double \mbox{\hyperlink{main_8cpp_a8824538eb07749fa64fd2ef98e557be9}{degrees\+To\+Radians}} (double degrees)
+\item 
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Тестовое задание 
+
+Данный файл содержит в себе модуль для генерации штриховки (hatch) внутри заданного контура квадратной или прямоугольной детали. Стороны квадрата параллельны осям. Программа принимает на вход массив точек, описывающий простой квадрат или прямоугольник, угол наклона штриховки относительно горизонтальной оси в градусах (0–180°) и шаг между линиями штриховки в мм (положительное число). Программа запускается командой\+: ./hatch\+\_\+generator --angle 45 --step 1 где --angle -\/ угол наклона штриховки, --step -\/ шаг. \begin{DoxyWarning}{Warning}
+Неверный формат вызыва программы может привести к ее аварийному завершению 
+\end{DoxyWarning}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a8824538eb07749fa64fd2ef98e557be9}\index{main.cpp@{main.cpp}!degreesToRadians@{degreesToRadians}}
+\index{degreesToRadians@{degreesToRadians}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{degreesToRadians()}{degreesToRadians()}}
+{\footnotesize\ttfamily \label{main_8cpp_a8824538eb07749fa64fd2ef98e557be9} 
+double degrees\+To\+Radians (\begin{DoxyParamCaption}\item[{double}]{degrees}{}\end{DoxyParamCaption})}
+
+Функция переводит урадусы угла в радианы 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & градусы \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+значение в радианах 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a1b29071e40cdef76db87e361837dfb3e}\index{main.cpp@{main.cpp}!findBottomRightCorner@{findBottomRightCorner}}
+\index{findBottomRightCorner@{findBottomRightCorner}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{findBottomRightCorner()}{findBottomRightCorner()}}
+{\footnotesize\ttfamily \label{main_8cpp_a1b29071e40cdef76db87e361837dfb3e} 
+\mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} find\+Bottom\+Right\+Corner (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} $>$ \&}]{in\+Contours\+Points}{}\end{DoxyParamCaption})}
+
+Функция находит нижний правый угол четырехугольника 
+\begin{DoxyParams}{Parameters}
+{\em in\+Contours\+Points} & вектор точек, описывающий простой квадрат или прямоугольник \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+координаты нижнего правого угла четырехугольника типа \doxylink{struct_point__2}{Point\+\_\+2} 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a04efb37fe057a49d431ecab19a7f01f9}\index{main.cpp@{main.cpp}!findTopLeftCorner@{findTopLeftCorner}}
+\index{findTopLeftCorner@{findTopLeftCorner}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{findTopLeftCorner()}{findTopLeftCorner()}}
+{\footnotesize\ttfamily \label{main_8cpp_a04efb37fe057a49d431ecab19a7f01f9} 
+\mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} find\+Top\+Left\+Corner (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} $>$ \&}]{in\+Contours\+Points}{}\end{DoxyParamCaption})}
+
+Функция находит верхний левый угол четырехугольника 
+\begin{DoxyParams}{Parameters}
+{\em in\+Contours\+Points} & вектор точек, описывающий простой квадрат или прямоугольник \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+координаты верхнего левый угла четырехугольника типа \doxylink{struct_point__2}{Point\+\_\+2} 
+\end{DoxyReturn}

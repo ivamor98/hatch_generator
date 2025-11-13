@@ -1,0 +1,3 @@
+C:/C++/Hatch/build/CMakeFiles/hatch_generator.dir
+C:/C++/Hatch/build/CMakeFiles/edit_cache.dir
+C:/C++/Hatch/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/C++/Hatch/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -O3 -DNDEBUG -o CMakeFiles\\hatch_generator.dir\\main.cpp.obj -c C:\\C++\\Hatch\\main.cpp",
+  "file": "C:/C++/Hatch/main.cpp",
+  "output": "CMakeFiles/hatch_generator.dir/main.cpp.obj"
+}
+]

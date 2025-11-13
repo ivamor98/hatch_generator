@@ -1,0 +1,51 @@
+\doxysection{Hatch\+Generator Class Reference}
+\hypertarget{class_hatch_generator}{}\label{class_hatch_generator}\index{HatchGenerator@{HatchGenerator}}
+
+
+Класс, генерирующий штриховку по заданным координатам четырехуголника  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_hatch_generator_adea8680247772b9de1e8a6893a4360c3}\label{class_hatch_generator_adea8680247772b9de1e8a6893a4360c3} 
+void {\bfseries print\+Hatch} ()
+\begin{DoxyCompactList}\small\item\em Функция печатает содержание вектора линий штриховки в формате Line 1\+: (0,0) -\/\texorpdfstring{$>$}{>} (10,10). \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_line__2}{Line\+\_\+2}} $>$ \mbox{\hyperlink{class_hatch_generator_a98ca6bb64cc754a1c850a757c1555220}{generate\+Hatch}} (const std\+::vector$<$ \mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} $>$ \&in\+Contours\+Points, const double \&angel, const double \&step)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, генерирующий штриховку по заданным координатам четырехуголника 
+
+\begin{DoxyWarning}{Warning}
+Данный класс не производит проверку входных данных. Координаты четырехуголника, шаг и угол штриховки должны быть заданы корректно. 
+\end{DoxyWarning}
+
+
+\label{doc-func-members}
+\Hypertarget{class_hatch_generator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hatch_generator_a98ca6bb64cc754a1c850a757c1555220}\index{HatchGenerator@{HatchGenerator}!generateHatch@{generateHatch}}
+\index{generateHatch@{generateHatch}!HatchGenerator@{HatchGenerator}}
+\doxysubsubsection{\texorpdfstring{generateHatch()}{generateHatch()}}
+{\footnotesize\ttfamily \label{class_hatch_generator_a98ca6bb64cc754a1c850a757c1555220} 
+std\+::vector$<$ \mbox{\hyperlink{struct_line__2}{Line\+\_\+2}} $>$ Hatch\+Generator\+::generate\+Hatch (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_point__2}{Point\+\_\+2}} $>$ \&}]{in\+Contours\+Points}{, }\item[{const double \&}]{angel}{, }\item[{const double \&}]{step}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Вычисляет точки пересечения линий штриховки со сторонами прямоугольника 
+\begin{DoxyParams}{Parameters}
+{\em in\+Contours\+Points} & координаты четырех углов прямоугольника \\
+\hline
+{\em angel} & угол в градусах (0 -\/ 180) \\
+\hline
+{\em step} & шаг в миллиметрах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Вектор линий штриховки std\+::vector$<$\+Line\+\_\+2$>$ hatch 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}
